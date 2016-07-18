@@ -12,9 +12,13 @@
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
 <% end %>
 
-<%= render 'layouts/header' %>
+<% unless @hide_menus%>
 
-<%= render 'layouts/sub_header' %>
+	<%= render 'layouts/header' %>
+
+	<%= render 'layouts/sub_header' %>
+
+<%end%>
 
 
 <div class="content-container">
@@ -30,6 +34,10 @@
 <div class="content-transparency">
 
 </div>
+
+<%= render 'modals/login_modal' %>
+
+<%= render 'modals/join_modal' %>
 
 </body>
 </html>

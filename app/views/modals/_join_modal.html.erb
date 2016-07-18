@@ -1,0 +1,19 @@
+<div class="modal-container" id="join-form">
+
+  <div class="modal-content">
+
+    <span class="dismiss-modal">+</span>
+
+    <%= form_for(:user, :url => registration_path(:user)) do |f| %>
+	  <%= f.text_field :email %>
+	  <%= f.password_field :password %>
+	  <%= f.check_box :remember_me %>
+	  <%= f.submit 'Join' %>
+	  <%= link_to "Forgot your password?", new_password_path(:user) %>
+	<% end %>
+
+  </div>
+
+
+</div>
+

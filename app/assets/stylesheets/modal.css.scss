@@ -1,0 +1,62 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.modal-container{
+	position: fixed;
+	left:0;
+	right:0;
+	top:0px;
+	bottom:0px;
+	height:100%;
+	width:100%;
+    background: rgba(200,200,200,0.4);
+    display:none;
+    vertical-overflow:hidden;
+    z-index: 9999;
+
+}
+
+.modal-content{
+	max-width:500px;
+	width:100%;
+	margin:0 auto;
+	z-index: 100;
+	background: rgba(30,30,30,1);
+	border: 1px solid rgba(0,0,0,0.7);
+    border-radius: 6px;
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+	top:150px;
+	position:relative;
+	padding: 50px;
+
+    h3{
+        background: #ccc;
+        padding: 10px 15px;
+        border-radius: 6px 6px 0px 0px;
+
+    }
+}
+
+span.dismiss-modal{
+    border: 0;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    position: absolute;
+    right: 0px;
+    top: -40px;
+    font-size:40px;
+    font-weight:700;
+    color:#666;
+    margin-top:30px;
+    text-shadow: 0px 2px 1px #ccc;
+}
+
+span.dismiss-modal:hover{
+    cursor:pointer;
+    text-decoration:none;
+    color:red;
+    webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
