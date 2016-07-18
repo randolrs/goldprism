@@ -77,6 +77,9 @@ body{
 .content-box{
 	padding:0px 25px;
 	width: auto;
+	border: 2px solid #111;
+    box-shadow: 0px 0px 1px #333;
+
 }
 
 .content-section{
