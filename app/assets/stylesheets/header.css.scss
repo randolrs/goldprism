@@ -34,19 +34,18 @@
 
 .dashboard-header-container{
 	position: fixed;
+    z-index: 6000;
     top: 0px;
     box-shadow: 0px 0px 4px #111;
-    border-top: 1px solid rgba(100,100,200,1);
-    border-bottom: 1px solid #111;
-    border-bottom: 1px solid #6464c8;
+    border-bottom: 1px solid #000;
     background: rgba(0,0,0,0.95);
 
-    background: -moz-linear-gradient(top, #111 50%, #000 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #111), color-stop(100%, #000));
-    background: -webkit-linear-gradient(top, #111 50%, #000 100%);
-    background: -o-linear-gradient(top, #111 50%, #000 100%);
-    background: -ms-linear-gradient(top, #111 50%, #000 100%);
-    background: linear-gradient(to bottom, #111 50%, #000 100%);
+    background: -moz-linear-gradient(top, #0f0f0f 50%, #000 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0f0f0f), color-stop(100%, #000));
+    background: -webkit-linear-gradient(top, #0f0f0f 50%, #000 100%);
+    background: -o-linear-gradient(top, #0f0f0f 50%, #000 100%);
+    background: -ms-linear-gradient(top, #0f0f0f 50%, #000 100%);
+    background: linear-gradient(to bottom, #0f0f0f 50%, #000 100%);
 
 
     
@@ -69,6 +68,20 @@
     a.active{
         background: #6464c8;
                 
+    }
+
+    li.site-title{
+        width: 150px;
+        text-align: center;
+        
+    }
+
+    a.site-title{
+        padding: 15px;
+        letter-spacing: 2.5px;
+        text-align: center;
+
+
     }
 
     a:hover{
@@ -108,12 +121,11 @@
 		    	}
 
 		    	a.item{
-    				border-right: 1px solid #000;
+    				
 		    	}
 
 		    	a.first-item{
-		    		border-left: 1px solid #000;
-    				border-right: 1px solid #000;
+		    		
 		    	}
 
 
@@ -156,7 +168,7 @@
 
     div.header-center{
 
-        padding-left: 150px;
+        
 	
 	}
 }

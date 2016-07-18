@@ -55,29 +55,17 @@ body{
 }
 
 
-
-.content-transparency{
-	
-	width: 100%;
-    position: absolute;
-    top: 0px;
-    bottom: 0px;
-    background: rgba(0,0,0,0.93);
-    z-index: -1000000;
-}
-
 .content{
     width: 100%;
-    max-width: 1000px;
     height: auto;
     margin: 0 auto;
+    background: rgba(0,0,0,0.93);
 }
 
 .content-box{
-	padding:0px 25px;
+	padding: 50px;
 	width: auto;
-	border: 2px solid #111;
-    box-shadow: 0px 0px 1px #333;
+
 
 }
 
