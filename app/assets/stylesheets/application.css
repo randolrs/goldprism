@@ -14,8 +14,6 @@
  *= require_self
  */
 
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
  html, body, div, span, ul, li, a, p, h1, h2, h3, h4, h5, h6{
  	
  	margin:0px;
@@ -46,7 +44,6 @@ body{
 	width:100%;
 	min-height: 100%;
 	max-width:100%;
-	background-image: asset-url("seamless_paper_texture.png");
 
 }
 
