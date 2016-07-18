@@ -14,7 +14,9 @@
 
 <% unless @hide_menus%>
 
-	<%= render 'layouts/header' %>
+	<%# render 'layouts/header' %>
+
+	<%= render 'layouts/sidebar' %>
 
 	<%= render 'layouts/sub_header' %>
 
@@ -24,6 +26,8 @@
 <div class="content-container">
 
 	<div class="header-offset">
+
+		<%= render 'layouts/context_cta' %>
 
 		<%= yield %>
 

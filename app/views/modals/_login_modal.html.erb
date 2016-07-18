@@ -4,6 +4,8 @@
 
     <span class="dismiss-modal">+</span>
 
+    <h3>Login</h3>
+
     <%= form_for(:user, :url => session_path(:user)) do |f| %>
 	  <%= f.text_field :email %>
 	  <%= f.password_field :password %>

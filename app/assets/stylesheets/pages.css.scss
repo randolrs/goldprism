@@ -15,3 +15,30 @@ body{
     	text-shadow: 0px 3px 0px #000;
 	}
 }
+
+.context-cta{
+	text-align: right;
+	padding:50px;
+
+	a{
+		padding: 10px 20px;
+    	border-radius: 20px;
+
+		color: #fff;
+	    text-shadow: 0px 1px 2px #222;
+	    background-color: #D94D50;
+	    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,150,150,1)), to(#D94D50));
+	    background-image: -webkit-linear-gradient(top, rgba(255,150,150,1), #D94D50);
+	    background-image: -moz-linear-gradient(top, rgba(255,150,150,1), #D94D50);
+	    background-image: -ms-linear-gradient(top, rgba(255,150,150,1), #D94D50);
+	    background-image: -o-linear-gradient(top, rgba(255,150,150,1), #D94D50);
+	    background-image: linear-gradient(top, rgba(255,150,150,1), #D94D50);
+	    border: 1px solid rgba(0,0,0,0.1);
+	    box-shadow: inset 0px 1px 3px 0px #fff;
+	}
+
+	a:hover{
+		cursor: pointer;
+	}
+}
+

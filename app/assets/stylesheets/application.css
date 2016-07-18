@@ -48,16 +48,19 @@ body{
 }
 
 .header-offset{
-	padding-top: 120px;
+	padding-top: 45px;
+	padding-left: 150px;
 
 
 }
+
+
 
 .content-transparency{
 	
 	width: 100%;
     position: absolute;
-    top: 117px;
+    top: 0px;
     bottom: 0px;
     background: rgba(0,0,0,0.93);
     z-index: -1000000;
@@ -68,7 +71,6 @@ body{
     max-width: 1000px;
     height: auto;
     margin: 0 auto;
-    padding-top: 50px;
 }
 
 .content-box{
