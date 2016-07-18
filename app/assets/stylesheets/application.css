@@ -21,6 +21,7 @@
  	margin:0px;
  	padding:0px;
  	border:0px;
+ 	color: #eee;
 
 }
 
@@ -45,14 +46,24 @@ body{
 	width:100%;
 	min-height: 100%;
 	max-width:100%;
-	background: rgba(0,0,0,.8);
+	background-image: asset-url("seamless_paper_texture.png");
 
 }
 
 .header-offset{
-	padding-top: 115px;
+	padding-top: 120px;
 
 
+}
+
+.content-transparency{
+	
+	width: 100%;
+    position: absolute;
+    top: 120px;
+    bottom: 0px;
+    background: rgba(0,0,0,0.9);
+    z-index: -1000000;
 }
 
 .content{
