@@ -9,6 +9,8 @@ ready = ->
 		jQuery ->
 
 			$(".modal-container").click (event), ->
+				contentContainer = $('body').find(".content-container")
+				contentContainer.removeClass('blurred')
 				$(@).hide()
 
 			$(".modal-content").click (event), ->
@@ -16,14 +18,20 @@ ready = ->
 
 			$("span.dismiss-modal").click (event), ->
 				modal = $('body').find(".modal-container")
+				contentContainer = $('body').find(".content-container")
+				contentContainer.removeClass('blurred')
 				modal.hide()
 
 			$(".login-modal-cta").click (event), ->
 				loginModal = $('body').find(".modal-container#login-form")
+				contentContainer = $('body').find(".content-container")
+				contentContainer.addClass('blurred')
 				loginModal.show()
 
 			$(".join-modal-cta").click (event), ->
 				joinModal = $('body').find(".modal-container#join-form")
+				contentContainer = $('body').find(".content-container")
+				contentContainer.addClass('blurred')
 				joinModal.show()
 
 $(document).ready(ready)

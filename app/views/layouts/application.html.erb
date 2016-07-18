@@ -8,17 +8,15 @@
 </head>
 <body>
 
-<% flash.each do |name, msg| %>
-     <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
-<% end %>
 
 <% unless @hide_menus%>
 
 	<%# render 'layouts/header' %>
-
-	<%= render 'layouts/sidebar' %>
-
 	<%= render 'layouts/sub_header' %>
+
+	<% if user_signed_in? %>
+		<%= render 'layouts/sidebar' %>
+	<%end%>
 
 <%end%>
 
@@ -27,7 +25,11 @@
 
 	<div class="header-offset">
 
-		<%= render 'layouts/context_cta' %>
+		<% if user_signed_in? %>
+
+			<%= render 'layouts/context_cta' %>
+
+		<%end%>
 
 		<%= yield %>
 

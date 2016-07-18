@@ -44,7 +44,16 @@ body{
 	width:100%;
 	min-height: 100%;
 	max-width:100%;
+	background: rgba(0,0,0,0.9);
 
+}
+
+.blurred{
+	-webkit-filter: blur(3px);
+  	-moz-filter: blur(3px);
+  	-o-filter: blur(3px);
+  	-ms-filter: blur(3px);
+  	filter: blur(3px);
 }
 
 .header-offset{
@@ -59,11 +68,10 @@ body{
     width: 100%;
     height: auto;
     margin: 0 auto;
-    background: rgba(0,0,0,0.93);
 }
 
 .content-box{
-	padding: 50px;
+	padding: 25px 50px;
 	width: auto;
 
 

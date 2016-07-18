@@ -6,9 +6,29 @@
 
 			<li class="site-title"><%= link_to "GOLDPRISM", root_path, class: "site-title" %></li>
 
-			<li><%= link_to "Action 1", root_path, class: "first-item" %></li>
+			<li><%= link_to "Producers", root_path, class: "first-item" %></li>
 
-			<li><%= link_to "Action 2", root_path, class: "item" %></li>
+			<li><%= link_to "MCs", root_path, class: "item" %></li>
+
+			<li><%= link_to "Studios", root_path, class: "item" %></li>
+
+			<li><%= link_to "Labels", root_path, class: "item" %></li>
+
+		</ul>
+
+		<ul class="header-right">
+
+		<% unless user_signed_in? %>
+
+			<li><a class="login-modal-cta">Login</a></li>
+
+			<li><a class="join-modal-cta header-cta">Signup</a></li>
+
+		<%else%>
+
+			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+
+		<%end%>
 
 		</ul>
 
