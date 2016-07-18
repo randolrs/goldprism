@@ -38,6 +38,8 @@ body{
 
 }
 
+a:visited {color:#eee;}
+
 .content-container{
 	height: auto;
 	width:100%;
