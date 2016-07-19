@@ -9,6 +9,9 @@ body{
 }
 
 .content-box{
+
+	display: inline-block;
+
 	h2{
 		font-size: 40px;
     	font-weight: 500;
@@ -51,7 +54,6 @@ body{
 .content-frame{
 	width: auto;
     box-shadow: 0px 2px 3px #000;
-   	max-width:600px;
    	margin-bottom:30px;
 }
 
@@ -60,7 +62,37 @@ body{
     background: #111;
     box-shadow: inset 0px 2px 5px #333;
     border-radius: 2px;
-    border: 1px solid #000;
+    border: 2px solid #000;
+
+    text-shadow: 0px 2px 0px #000;
+
+    h3{
+
+		font-size: 40px;
+		font-weight: 400;
+		line-height: 50px;
+		text-shadow: 0px 3px 0px #000;
+
+	}
+
+	h4{
+
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 50px;
+
+	}
+
+	h5{
+		width: auto;
+    	padding: 10px;
+    	font-size: 20px;
+    	font-weight: 400;
+	}
+
+    p{
+    	padding:10px;
+    }
 }
 
 .home-profile-header{
@@ -80,6 +112,8 @@ body{
 		width:100px;
 		height: 100px;
 		border-radius: 60px;
+		border:2px solid #fff;
+		box-shadow: 0px 4px 1px #000;
 	}
 }
 
@@ -89,21 +123,7 @@ body{
 	padding: 0px 30px;
 	vertical-align: top;
 
-	h3{
 
-		font-size: 40px;
-		font-weight: 400;
-		line-height: 50px;
-
-	}
-
-	h4{
-
-		font-size: 20px;
-		font-weight: 400;
-		line-height: 50px;
-
-	}
 
 }
 
@@ -165,10 +185,21 @@ body{
 	
 	box-shadow: inset 0px 1px 1px #333;
 
-	h5{
-		width: auto;
-    	padding: 10px;
-    	font-size: 20px;
-	}
+
+}
+
+.main-content-column{
+	
+	max-width:500px;
+	display: inline-block;
+    vertical-align: top;
+    margin-right: 30px;
+	
+}
+
+.side-content-column{
+	max-width:300px;
+	display: inline-block;
+    vertical-align: top;
 }
 
