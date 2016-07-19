@@ -6,7 +6,7 @@
 
 			<li><a class="sidebar-item" href="<%= root_path %>"><span><img></img><br>Home</span></a></li>
 
-			<li><a class="sidebar-item" href="<%= profile_page_path("jerome")%>"><span><img></img><br>My Profile</span></a></li>
+			<li><a class="sidebar-item" href="<%= profile_page_path(current_user.display_name)%>"><span><img></img><br>My Profile</span></a></li>
 
 			<li><a class="sidebar-item"><span><img></img><br>Balance: <span style="color: green;">$20.00</span></span></a></li>
 

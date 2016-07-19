@@ -1,8 +1,75 @@
+
 <div class="content">
 
 	<div class="content-box">
+
+		<div class="main-content-column">
 		
-		Hell me
+			<div class="content-frame">
+
+				<div class="content-panel">
+
+					<div class="home-profile-header">
+
+						<div class="home-profile-image">
+
+							<%= image_tag @user.image.url(:medium) %>
+
+						</div>
+
+						<div class="home-profile-text">
+
+							<h3><%= @user.display_name %></h3>
+
+							<h4>Producer</h4>
+
+						</div>
+
+					</div>
+
+					<div class="tabular-data">
+
+						<ul>
+
+							<li><a>Followers<br><span>122</span></a></li>
+							<li><a class="middle">Views<br><span>122</span></a></li>
+							<li><a>Requests<br><span>122</span></a></li>
+
+						</ul>
+
+					</div>
+
+				</div>
+
+			</div>
+
+
+			<div class="content-frame">
+
+				<div class="content-panel">
+
+					<p>You have 6 new requests for beats totalling $4,000.</p>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="side-content-column">
+
+			<div class="content-frame">
+
+				<div class="content-panel">
+
+					<p>Improve Your Account</p>
+
+				</div>
+
+			</div>
+
+
+		</div>
 
 	</div>
 

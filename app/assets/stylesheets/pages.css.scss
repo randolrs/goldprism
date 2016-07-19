@@ -120,7 +120,6 @@ body{
 
 .home-profile-text{
 	display: table-cell;
-	padding: 0px 30px;
 	vertical-align: top;
 
 
@@ -174,6 +173,46 @@ body{
 	    		cursor: pointer;
 	    		background: #000;
     			box-shadow: inset 0px 0px 5px #333;
+	    	}
+
+		}
+
+	}
+}
+
+.tabular-data{
+
+	border-top: 2px solid #000;
+	
+	ul{
+
+		list-style-type: none;
+	    margin: 0;
+	    padding: 0;
+	    display: inline-table;
+	    width: 100%;
+
+
+		li{
+
+			display: table-cell;
+	    	text-align: center;
+	    	width:196px;
+
+	    	a{
+
+	    		display: block;
+	    		padding: 10px 0px;
+	    		box-shadow: inset 0px 1px 1px #333;
+
+	    	}
+
+
+	    	a.middle{
+
+	    		border-left: 2px solid #000;
+    			border-right: 2px solid #000;
+
 	    	}
 
 		}
