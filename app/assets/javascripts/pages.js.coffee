@@ -40,5 +40,9 @@ ready = ->
 				contentContainer.addClass('blurred')
 				settingsModal.show()
 
+			$(".option-item").click (event), ->
+				$('body').find('.option-item.active').removeClass("active")
+				$(@).addClass("active")
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

@@ -2,10 +2,23 @@
 
   <div class="modal-content">
 
+  	<h3>Account Settings</h3>
+
     <span class="dismiss-modal">+</span>
 
-    
-    <%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { method: :put }) do |f| %>
+	<div class="horizontal-sub-nav">
+
+		<ul>
+
+			<li><a class="option-item active" id="basic-option"><span>Basic Info</span></a></li>
+			<li><a class="option-item middle"  id="payment-option"><span>Payments</span></a></li>
+			<li><a class="option-item" id="cancel-option"><span>Cancel Account</span></a></li>
+
+		</ul>
+
+	</div>
+
+    <%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { id: "basic", method: :put }) do |f| %>
 
 		<div><%= f.label :email %><br />
 		<%= f.email_field :email, autofocus: true %></div>
@@ -18,9 +31,6 @@
 		<div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
 		<%= f.password_field :password, autocomplete: "off" %></div>
 
-		<div><%= f.label :password_confirmation %><br />
-		<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
-
 		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
 		<%= f.password_field :current_password, autocomplete: "off" %></div>
 
@@ -28,7 +38,25 @@
 
 	<% end %>
 
+	<%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { id: "payments", method: :put }) do |f| %>
 
+		<div><%= f.label :email %><br />
+		<%= f.email_field :email, autofocus: true %></div>
+
+		<div><%= f.label :display_name %><br />
+		<%= f.text_field :display_name %></div>
+
+		<%= f.file_field :image, class: "form-control" %>
+
+		<div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+		<%= f.password_field :password, autocomplete: "off" %></div>
+
+		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+		<%= f.password_field :current_password, autocomplete: "off" %></div>
+
+		<div><%= f.submit "Update" %></div>
+
+	<% end %>
 
   </div>
 
