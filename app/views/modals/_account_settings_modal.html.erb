@@ -1,0 +1,37 @@
+<div class="modal-container" id="settings">
+
+  <div class="modal-content">
+
+    <span class="dismiss-modal">+</span>
+
+    
+    <%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { method: :put }) do |f| %>
+
+		<div><%= f.label :email %><br />
+		<%= f.email_field :email, autofocus: true %></div>
+
+		<div><%= f.label :display_name %><br />
+		<%= f.text_field :display_name %></div>
+
+		<%= f.file_field :image, class: "form-control" %>
+
+		<div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+		<%= f.password_field :password, autocomplete: "off" %></div>
+
+		<div><%= f.label :password_confirmation %><br />
+		<%= f.password_field :password_confirmation, autocomplete: "off" %></div>
+
+		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+		<%= f.password_field :current_password, autocomplete: "off" %></div>
+
+		<div><%= f.submit "Update" %></div>
+
+	<% end %>
+
+
+
+  </div>
+
+
+</div>
+

@@ -34,5 +34,11 @@ ready = ->
 				contentContainer.addClass('blurred')
 				joinModal.show()
 
+			$(".account-settings-modal").click (event), ->
+				settingsModal = $('body').find(".modal-container#settings")
+				contentContainer = $('body').find(".content-container")
+				contentContainer.addClass('blurred')
+				settingsModal.show()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)
