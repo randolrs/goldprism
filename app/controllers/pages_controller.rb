@@ -1,6 +1,16 @@
 class PagesController < ApplicationController
 
+	def home
+
+
+		@page = "home"
+
+	end
+
+
 	def profile_page
+
+		@page = "profile"
 		
 		if params[:username]
 
@@ -14,5 +24,12 @@ class PagesController < ApplicationController
 
 			redirect_to root_path
 		end	
+	end
+
+	def requests
+
+
+		@page = "requests"
+
 	end
 end

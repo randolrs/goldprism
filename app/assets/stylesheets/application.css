@@ -98,3 +98,7 @@ a:visited {color:#eee;}
 a.link-wrapper{
 	text-decoration:none;
 }
+
+span.money-green-span{
+    color: #59EA3A;
+}

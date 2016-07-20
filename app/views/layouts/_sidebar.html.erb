@@ -4,15 +4,15 @@
 
 		<ul class="sidebar-options">
 
-			<li><a class="sidebar-item" href="<%= root_path %>"><span><img></img><br>Home</span></a></li>
+			<li><a class="sidebar-item <% if @page == "home" %> active <%end%>" href="<%= root_path %>"><span><img></img><br>Home</span></a></li>
 
-			<li><a class="sidebar-item" href="<%= profile_page_path(current_user.display_name)%>"><span><img></img><br>My Profile</span></a></li>
+			<li><a class="sidebar-item <% if @page == "profile" %> active <%end%>" href="<%= profile_page_path(current_user.display_name)%>"><span><img></img><br>My Profile</span></a></li>
 
-			<li><a class="sidebar-item"><span><img></img><br>Balance: <span style="color: green;">$20.00</span></span></a></li>
+			<li><a class="sidebar-item <% if @page == "requests" %> active <%end%>" href="<%= requests_path %>"><span><img></img><br>Requests</span></a></li>
 
-			<li><a class="sidebar-item"><span><img></img><br>Requests</span></a></li>
+			<li><a class="sidebar-item <% if @page == "account" %> active <%end%>" href="/settings"><span><img></img><br>Settings</span></a></li>
 
-			<li><a class="sidebar-item" href="<%= edit_user_registration_path %>"><span><img></img><br>Account Settings</span></a></li>
+			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
 
 		</ul>
 

@@ -28,7 +28,13 @@
 	    font-size: 30px;
 	    color: rgba(100,255,100,1);
 	    text-shadow: 0px 3px 0px #000;
+        letter-spacing: 2.5px;
+        color: #FFA100;
+    }
+
+    a.site-title:hover{
         letter-spacing: 3px;
+        color: #FFA100;
     }
 }
 
@@ -82,15 +88,21 @@
         padding: 15px;
         letter-spacing: 2.5px;
         text-align: center;
-        color: rgba(255,150,255,1);
+        color: #FFA100;
         text-shadow: 0px 1px 0px #222;
         font-weight: 600;
 
 
     }
 
+    a.site-title:hover{
+        letter-spacing: 2.3px;
+        color: #FFA100;
+    }
+
     a:hover{
-    	color: #6464c8;
+    	color: #FFA100;
+        letter-spacing: 1.9px;
     	text-shadow: none;
     }
 }
@@ -136,25 +148,36 @@
 
 		    	a:hover{
 		    		cursor: pointer;
-                    color: #0ff;
+                    color: #6A94D4;
 		    		
 		    	}
 
+                a.balance-item{
+                    color: #eee;
+                }
+
+                a.balance-item:hover{
+                    
+                    letter-spacing: 2px;
+                    background:#666;
+                }
+
                 a.header-cta{
                     padding: 8px 20px;
-                    margin: 6px 0px;
+                    margin: 7px 0px;
 
                     color: #fff;
                     text-shadow: 0px 1px 2px #222;
-                    background-color: #3333ff;
+                    background-color: #00A383;
 
-                    background-image: -webkit-gradient(linear, left top, left bottom, from(#7777FF), to(#3333ff));
-                    background-image: -webkit-linear-gradient(top, #7777FF, #3333ff);
-                    background-image: -moz-linear-gradient(top, #7777FF, #3333ff);
-                    background-image: -ms-linear-gradient(top, #7777FF, #3333ff);
-                    background-image: -o-linear-gradient(top, #7777FF, #3333ff);
-                    background-image: linear-gradient(top, #7777FF, #3333ff);
+                    background-image: -webkit-gradient(linear, left top, left bottom, from(#34d1b2), to(#00A383));
+                    background-image: -webkit-linear-gradient(top, #34d1b2, #00A383);
+                    background-image: -moz-linear-gradient(top, #34d1b2, #00A383);
+                    background-image: -ms-linear-gradient(top, #34d1b2, #00A383);
+                    background-image: -o-linear-gradient(top, #34d1b2, #00A383);
+                    background-image: linear-gradient(top, #34d1b2, #00A383);
                     border: 1px solid rgba(0,0,0,0.1);
+
                     box-shadow: inset 0px 1px 3px 0px #fff;
 
                     border-radius: 30px;
