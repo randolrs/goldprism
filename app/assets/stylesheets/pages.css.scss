@@ -152,6 +152,10 @@ body{
 	display: table-cell;
 	vertical-align: top;
 
+	h2.name{
+		margin: 0px;
+	}
+
 
 
 }
@@ -281,6 +285,7 @@ body{
 
     h2{
     	color: #FFB840;
+    	margin-bottom: 20px;
     }
 
     h3{
