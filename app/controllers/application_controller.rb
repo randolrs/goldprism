@@ -26,8 +26,5 @@ class ApplicationController < ActionController::Base
 
 		end
 
-	def settings
-		@page = "settings"
-	end
 
 end

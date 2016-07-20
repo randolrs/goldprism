@@ -48,8 +48,6 @@
                 background-image: -ms-linear-gradient(top, #111, #000);
                 background-image: -o-linear-gradient(top, #111, #000);
                 background-image: linear-gradient(top, #111, #000);
-                webkit-transition: all 0.2s ease;
-                transition: all 0.2s ease;
 
                 font-weight: 700;
                 letter-spacing: 1.1px;
@@ -64,17 +62,28 @@
                 
             }
 
+            a.sidebar-item.active:hover{
+
+                background: #000;
+                box-shadow: none;
+                border-right: 2px solid #6A94D4;
+                color: #6A94D4;
+                
+            }
 
             a:hover{
-
-                webkit-transition: all 0.2s ease;
-                transition: all 0.2s ease;
 
                 cursor: pointer;
                 box-shadow: none;
                 background: #0e0e0e;
+            }
+
+            a.sidebar-item:hover{
+
                 border-right: 2px solid #0e0e0e;
             }
+
+
         }
     }
 
