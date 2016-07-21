@@ -40,13 +40,19 @@
 
 		</div>
 
-		<div class="form-section centered">
-			<%= f.password_field :current_password, autofocus: "on" %>
+		<div class="form-section centered current-password">
+			<%= f.password_field :current_password, autofocus: "on", placeholder: "Confirm Your Password" %>
 		</div>
 
 		<div class="form-section centered">
-			<%= f.submit "Update Profile", class: "modal-form-submit" %>
+			<a class="modal-form-submit" id="update-profile">Update Profile</a>
 		</div>
+
+		<div class="form-section centered">
+			<%= f.submit "Confirm", class: "modal-form-submit" %>
+		</div>
+
+
 
 	<% end %>
 

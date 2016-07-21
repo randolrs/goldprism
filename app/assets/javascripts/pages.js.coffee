@@ -44,5 +44,10 @@ ready = ->
 				$('body').find('.option-item.active').removeClass("active")
 				$(@).addClass("active")
 
+			$("#update-profile").click (event), ->
+				thisForm = $(@).parent().parent()
+				thisForm.hide()
+				thisForm.child(".current-password").show()
+
 $(document).ready(ready)
 $(document).on('page:load', ready)

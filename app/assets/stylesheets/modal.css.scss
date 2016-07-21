@@ -23,7 +23,7 @@
 	margin:0 auto;
 	z-index: 100;
 	background: #000;
-	top:70px;
+	top:20px;
 	position:relative;
 
     box-shadow: inset 0px 2px 5px #333;
@@ -149,7 +149,7 @@ form#payments{
         h5{
             color: #FFB840;
             font-size: 18px;
-            font-weight: 400;
+            font-weight: 700;
             margin-bottom: 5px;
         }
 
@@ -172,13 +172,34 @@ form#payments{
     input[type="email"], input[type="text"]{
         
         width: 100%;
-        font-size: 20px;
+        font-size: 18px;
         background: none;
         color: #eee;
         font-weight: 400;
-        border: none;
         border-bottom: 1px solid #000;
+        border: none;
         padding: 5px 0px;
+    }
+
+    input[type="password"]{
+        
+        width: 50%;
+        font-size: 18px;
+        background: none;
+        color: #fff;
+        font-weight: 400;
+        padding: 10px 0px;
+        text-align:center;
+        border-radius: 3px;
+        border: 2px solid #fff;
+    }
+
+    input[type="password"]:focus{
+        
+        outline:none;
+        border: 2px solid #000;
+        background: #fff;
+        color: #111;
     }
 
     input[type="email"]:focus, input[type="text"]:focus{
@@ -201,6 +222,8 @@ form#payments{
 
     .modal-form-submit{
         width: 50%;
+        display:block;
+        margin: 0 auto;
         padding: 10px 0px;
         border: none;
         outline: none;
@@ -223,4 +246,8 @@ form#payments{
     .modal-form-submit:hover{
         cursor:pointer;
     }
+}
+
+.current-password{
+    dispaly: none;
 }
