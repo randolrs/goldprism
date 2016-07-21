@@ -45,9 +45,11 @@ ready = ->
 				$(@).addClass("active")
 
 			$("#update-profile").click (event), ->
-				thisForm = $(@).parent().parent()
-				thisForm.hide()
-				thisForm.child(".current-password").show()
+				thisForm = $(@).parent().parent().parent()
+				mainForm = thisForm.find('.main-form')
+				confirmForm = thisForm.find('.confirm-form')
+				mainForm.hide()
+				confirmForm.show()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
