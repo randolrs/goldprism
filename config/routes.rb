@@ -13,6 +13,8 @@ Rails.application.routes.draw do
 
    get 'requests' => "pages#requests"
 
+   get 'balance' => "pages#balance"
+
    #devise_for :users, :path_names => { :sign_up => "signup", :sign_in => "login", :edit_registration => "settings"}
 
    get '/:username/' => 'pages#profile_page', as: 'profile_page'

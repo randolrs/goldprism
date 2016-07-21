@@ -10,7 +10,7 @@
 
 			<li><a class="sidebar-item <% if @page == "requests" %> active <%end%>" href="<%= requests_path %>"><span><img></img><br>Requests</span></a></li>
 
-			<li><a class="sidebar-item account-settings-modal<% if @page == "settings" %> active <%end%>" href="#"><span><img></img><br>Settings</span></a></li>
+			<li><a class="sidebar-item <% if @page == "balance" %> active <%end%>" href="<%# balance_path%>"><span><img></img></span><br>Balance: <span class="money-green-span">$20.00</span></a></li>
 
 			<!-- <li><%# link_to "Logout", destroy_user_session_path, method: :delete %></li> -->
 
