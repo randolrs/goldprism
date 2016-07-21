@@ -18,23 +18,35 @@
 
 	</div>
 
-    <%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { id: "basic", method: :put }) do |f| %>
+    <%= form_for(current_user, url: registration_path(current_user), html: { id: "basic", method: :put, class: "modal-form" }) do |f| %>
 
-		<div><%= f.label :email %><br />
-		<%= f.email_field :email, autofocus: true %></div>
+    	<div class="form-section">
+			<h5>Email</h5>
+			<%= f.email_field :email, autofocus: true %>
+		</div>
 
-		<div><%= f.label :display_name %><br />
-		<%= f.text_field :display_name %></div>
+		<div class="form-section">
+			<h5>Display Name</h5>
+			<%= f.text_field :display_name %>
+		</div>
 
-		<%= f.file_field :image, class: "form-control" %>
+		<div class="form-section">
+			
+			<h5>Profile Picture</h5>
 
-		<div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-		<%= f.password_field :password, autocomplete: "off" %></div>
+			<%= image_tag current_user.image.url(:medium) %>
 
-		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-		<%= f.password_field :current_password, autocomplete: "off" %></div>
+			<%= f.file_field :image, class: "form-control" %>
 
-		<div><%= f.submit "Update" %></div>
+		</div>
+
+		<div class="form-section centered">
+			<%= f.password_field :current_password, autofocus: "on" %>
+		</div>
+
+		<div class="form-section centered">
+			<%= f.submit "Update Profile", class: "modal-form-submit" %>
+		</div>
 
 	<% end %>
 
@@ -54,7 +66,7 @@
 		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
 		<%= f.password_field :current_password, autocomplete: "off" %></div>
 
-		<div><%= f.submit "Update" %></div>
+		<div><%= f.submit "Update Profile" %></div>
 
 	<% end %>
 
