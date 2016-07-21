@@ -44,7 +44,25 @@ ready = ->
 				$('body').find('.option-item.active').removeClass("active")
 				$(@).addClass("active")
 
-			$("#update-profile").click (event), ->
+			$("#basic-option").click (event), ->
+				$('body').find('#cancel-account').hide()
+				$('body').find('form#payments').hide()
+				$('body').find('form#basic').show()
+				event.preventDefault()
+
+			$("#payment-option").click (event), ->
+				$('body').find('form#basic').hide()
+				$('body').find('#cancel-account').hide()
+				$('body').find('form#payments').show()
+				event.preventDefault()
+
+			$("#cancel-option").click (event), ->
+				$('body').find('form#basic').hide()
+				$('body').find('form#payments').hide()
+				$('body').find('#cancel-account').show()
+				event.preventDefault()
+
+			$(".update-profile").click (event), ->
 				thisForm = $(@).parent().parent().parent()
 				mainForm = thisForm.find('.main-form')
 				confirmForm = thisForm.find('.confirm-form')

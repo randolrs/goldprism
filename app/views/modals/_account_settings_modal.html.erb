@@ -43,7 +43,7 @@
 			</div>
 
 			<div class="form-section centered">
-				<a class="modal-form-submit" id="update-profile">Update Profile</a>
+				<a class="modal-form-submit update-profile">Update Profile</a>
 			</div>
 
 		</div>
@@ -62,25 +62,45 @@
 
 	<% end %>
 
-	<%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { id: "payments", method: :put }) do |f| %>
+	<%= form_for(current_user, as: :user, url: edit_registration_path(current_user), html: { id: "payments", method: :put, class: "modal-form" }) do |f| %>
 
-		<div><%= f.label :email %><br />
-		<%= f.email_field :email, autofocus: true %></div>
+		<div class="main-form">
 
-		<div><%= f.label :display_name %><br />
-		<%= f.text_field :display_name %></div>
+	    	<div class="form-section">
+				<h5>Card Number</h5>
+				<%= f.email_field :email, autofocus: true %>
+			</div>
 
-		<%= f.file_field :image, class: "form-control" %>
+			<div class="form-section">
+				<h5>Expiration Date</h5>
+				<%= f.text_field :display_name %>
+			</div>
 
-		<div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-		<%= f.password_field :password, autocomplete: "off" %></div>
+			<div class="form-section centered">
+				<a class="modal-form-submit update-profile">Update Profile</a>
+			</div>
 
-		<div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-		<%= f.password_field :current_password, autocomplete: "off" %></div>
+		</div>
 
-		<div><%= f.submit "Update Profile" %></div>
+		<div class="confirm-form">
+
+			<div class="form-section centered current-password">
+				<%= f.password_field :current_password, autofocus: "on", placeholder: "Confirm Your Password" %>
+			</div>
+
+			<div class="form-section centered">
+				<%= f.submit "Confirm", class: "modal-form-submit" %>
+			</div>
+
+		</div>
 
 	<% end %>
+
+	<div id="cancel-account">
+
+		<%= button_to "Cancel My Account", registration_path(current_user), data: { confirm: "Are you sure?" }, method: :delete, class: "cancel-account-button" %>
+
+	</div>
 
   </div>
 
