@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :tracks
+
   devise_scope :user do
     get "/settings" => "devise/registrations#edit"
   end

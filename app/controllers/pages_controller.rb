@@ -8,6 +8,7 @@ class PagesController < ApplicationController
 
 	def balance
 
+		@page = "balance"
 
 
 	end

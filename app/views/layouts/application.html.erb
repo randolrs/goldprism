@@ -41,7 +41,9 @@
 
 <%= render 'modals/join_modal' %>
 
-<%= render 'modals/account_settings_modal' %>
+<% if user_signed_in? %>
+	<%= render 'modals/account_settings_modal' %>
+<%end%>
 
 </body>
 </html>
