@@ -110,7 +110,7 @@
 
 				<div class="content-frame stacked">
 
-					<div class="content-panel tracks" id="<%= track.id%>" href="<%= track.mp3.url%>">
+					<div class="content-panel tracks" id="<%= track.id%>" href="<%= track.mp3.url%>" data-name="<%= track.name%>" data-author="<%= track.user.display_name%>">
 
 						<span class="track-name"><%= track.name%></span><span class="track-price"><%= number_to_currency(track.price) %></span>
 

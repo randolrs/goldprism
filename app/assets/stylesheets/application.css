@@ -67,6 +67,12 @@ a:visited {color:#eee;}
 
 }
 
+.header-offset.audio-player-active{
+  padding-bottom: 100px;
+
+
+}
+
 
 .content{
     width: 100%;

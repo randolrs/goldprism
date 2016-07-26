@@ -6,10 +6,28 @@
     display:none;
     position: fixed;
     bottom: 0px;
-    background: #666;
+    background: rgb(0, 163, 131);
     width:100%;
     padding: 5px 0px;
     z-index: 9999999999;
+    border-top: 3px solid #000;
+    box-shadow: 0px -5px 5px #111;
+
+    h3{
+        text-align: center;
+        font-weight: 400;
+        padding: 5px 0px;
+        font-size: 30px;
+        text-shadow: 0px 1px 1px #333;
+    }
+
+    h4{
+        text-align: center;
+        font-weight: 400;
+        padding: 5px 0px;
+        font-size: 24px;
+        text-shadow: 0px 1px 1px #333;
+    }
 }
 
 audio{

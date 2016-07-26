@@ -1,0 +1,36 @@
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// compiled file.
+//
+// Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
+// about supported directives.
+
+
+$(document).ready(function() {  
+     var audioSection = $('section#song');  
+
+     var trackName = $('h3#track-name');
+
+     var authorName = $('h4#author-name');
+     
+     $('div.content-panel.tracks').click(function() { 
+
+     $('body').find('.header-offset').addClass('audio-player-active') 
+
+     var audio = $('<audio>', {  
+         controls : 'controls', autoplay: true  
+     });  
+
+     var url = $(this).attr('href');  
+     $('<source>').attr('src', url).appendTo(audio);  
+     audioSection.html(audio);  
+     trackName.html($(this).data('name'))
+     authorName.html('by ' + $(this).data('author'))
+     return false;       
+ 	});  
+ });
