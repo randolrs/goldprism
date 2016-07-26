@@ -37,13 +37,21 @@
 
 </div>
 
-<%= render 'modals/login_modal' %>
+	<% if user_signed_in? %>
 
-<%= render 'modals/join_modal' %>
+		<%= render 'modals/upload_track_modal' %>
+		
+		<%= render 'modals/account_settings_modal' %>
 
-<% if user_signed_in? %>
-	<%= render 'modals/account_settings_modal' %>
-<%end%>
+	<%else%>
+
+		<%= render 'modals/login_modal' %>
+
+		<%= render 'modals/join_modal' %>
+
+	<%end%>
+
+	<%= render 'modals/audio/audio_player' %>
 
 </body>
 </html>

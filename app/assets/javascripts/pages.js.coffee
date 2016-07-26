@@ -34,6 +34,12 @@ ready = ->
 				contentContainer.addClass('blurred')
 				joinModal.fadeIn()
 
+			$("#upload-track-cta").click (event), ->
+				trackModal = $('body').find(".modal-container#upload-track-form")
+				contentContainer = $('body').find(".content-container")
+				contentContainer.addClass('blurred')
+				trackModal.fadeIn()
+
 			$(".account-settings-modal").click (event), ->
 				settingsModal = $('body').find(".modal-container#settings")
 				contentContainer = $('body').find(".content-container")
@@ -43,6 +49,9 @@ ready = ->
 			$(".option-item").click (event), ->
 				$('body').find('.option-item.active').removeClass("active")
 				$(@).addClass("active")
+
+			$(".content-panel.tracks").click (event), ->
+				$('body').find('.audio-player').show()
 
 			$("#basic-option").click (event), ->
 				$('body').find('#cancel-account').hide()

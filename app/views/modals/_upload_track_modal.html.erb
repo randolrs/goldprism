@@ -1,0 +1,25 @@
+<div class="modal-container full" id="upload-track-form">
+
+	<span class="dismiss-modal">+</span>
+
+	<div class="modal-content full">
+
+    	<h4>Upload a New Track</h4>
+
+	    <%= form_for(@new_track) do |f| %>
+
+			<%= f.text_field :name, placeholder: "Track Name" %><br>
+
+			<%= f.text_field :price, placeholder: "$5.00" %><br>
+
+			<%= f.file_field :mp3, class: "form-control" %>
+
+			<%= f.submit %>
+
+		<% end %>
+
+  </div>
+
+
+</div>
+

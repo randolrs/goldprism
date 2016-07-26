@@ -100,22 +100,19 @@
 
 			</div>
 
-
-
-
 		</div>
 
 		<div class="side-content-column">
 
 			<h4>For Sale</h4>
 
-			<% @user.tracks.each do |track| %>
+			<% @last_5_user_tracks.each do |track| %>
 
 				<div class="content-frame stacked">
 
-					<div class="content-panel">
+					<div class="content-panel tracks" id="<%= track.id%>" href="<%= track.mp3.url%>">
 
-						<p><%= track.name%></p>
+						<span class="track-name"><%= track.name%></span><span class="track-price"><%= number_to_currency(track.price) %></span>
 
 					</div>
 

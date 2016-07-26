@@ -4,6 +4,12 @@ class PagesController < ApplicationController
 
 		@page = "home"
 
+		if user_signed_in?
+
+			@last_5_user_tracks = current_user.tracks.last(5)
+
+		end
+
 	end
 
 	def balance
@@ -24,7 +30,9 @@ class PagesController < ApplicationController
 			unless @user
 				redirect_to root_path
 			end
-		
+
+			@last_5_user_tracks = @user.tracks.last(5).reverse
+
 		else
 
 			redirect_to root_path

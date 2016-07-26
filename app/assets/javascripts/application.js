@@ -14,3 +14,17 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {  
+     var audioSection = $('section#song');  
+     $('div.content-panel.tracks').click(function() {  
+
+     var audio = $('<audio>', {  
+         controls : 'controls', autoplay: true  
+     });  
+
+     var url = $(this).attr('href');  
+     $('<source>').attr('src', url).appendTo(audio);  
+     audioSection.html(audio);  
+     return false;       });  
+ });
