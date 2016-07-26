@@ -84,11 +84,17 @@ body{
     text-shadow: 0px 2px 0px #000;
 
     span.track-name{
+    	padding:10px;
+    	display: inline-block;
 
     }
 
     span.track-price{
     	color: rgba(0,200,0,1);
+    	right:0px;
+    	padding: 10px;
+    	display: inline-block;
+    	float: right;
     }
 
     h2{
