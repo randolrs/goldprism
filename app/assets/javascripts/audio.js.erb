@@ -12,11 +12,11 @@
 
 
 $(document).ready(function() {  
-     var audioSection = $('section#song');  
+     var audioSection = $('section#song'); 
 
      var trackName = $('h3#track-name');
 
-     var authorName = $('h4#author-name');
+     var buyCTA = $('a.buy-cta');
      
      $('div.content-panel.tracks').click(function() { 
 
@@ -29,8 +29,8 @@ $(document).ready(function() {
      var url = $(this).attr('href');  
      $('<source>').attr('src', url).appendTo(audio);  
      audioSection.html(audio);  
-     trackName.html($(this).data('name'))
-     authorName.html('by ' + $(this).data('author'))
+     trackName.html($(this).data('name') + ' by ' + $(this).data('author'))
+     buyCTA.html('Purchase for ' + $(this).data('price'))
      return false;       
  	});  
  });

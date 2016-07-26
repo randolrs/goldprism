@@ -80,6 +80,7 @@ ready = ->
 
 			$(".home-profile-header").click (event), ->
 				$('body').find('.home-profile-about').slideToggle()
+					
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
