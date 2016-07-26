@@ -80,7 +80,23 @@ ready = ->
 
 			$(".home-profile-header").click (event), ->
 				$('body').find('.home-profile-about').slideToggle()
-					
 
+			$(".content").click (event), ->
+				audioContainer = $('body').find('.audio-player')
+				audioPlayer = audioContainer.find('audio.audio-player-object')
+				audioHeader = audioContainer.find('h3.audio-player-header')
+				audioFunctions = audioContainer.find('.audio-functions')
+				if audioContainer.is(":visible")
+					audioPlayer.trigger('pause')
+					audioHeader.addClass("clickable")
+					audioFunctions.slideUp()
+
+			$("h3.audio-player-header").click (event), ->
+				audioContainer = $('body').find('.audio-player')
+				audioPlayer = audioContainer.find('audio.audio-player-object')
+				audioFunctions = audioContainer.find('.audio-functions')
+				audioFunctions.slideDown()
+				audioPlayer.trigger('play')
+					
 $(document).ready(ready)
 $(document).on('page:load', ready)

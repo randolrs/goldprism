@@ -23,7 +23,7 @@ $(document).ready(function() {
      $('body').find('.header-offset').addClass('audio-player-active') 
 
      var audio = $('<audio>', {  
-         controls : 'controls', autoplay: true  
+         controls : 'controls', autoplay: true, class: "audio-player-object"  
      });  
 
      var url = $(this).attr('href');  
