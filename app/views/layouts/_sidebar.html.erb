@@ -6,7 +6,7 @@
 
 			<li><a class="sidebar-item <% if @page == "home" %> active <%end%>" href="<%= root_path %>"><span><img></img><br>Home</span></a></li>
 
-			<li><a class="sidebar-item <% if @page == "profile" %> active <%end%>" href="<%= profile_page_path(current_user.display_name)%>"><span><img></img><br>My Profile</span></a></li>
+			<%if current_user.name %><li><a class="sidebar-item <% if @page == "profile" %> active <%end%>" href="<%= profile_page_path(current_user.display_name)%>"><span><img></img><br>My Profile</span></a></li><%end%>
 
 			<li><a class="sidebar-item <% if @page == "requests" %> active <%end%>" href="<%= requests_path %>"><span><img></img><br>Requests</span></a></li>
 
