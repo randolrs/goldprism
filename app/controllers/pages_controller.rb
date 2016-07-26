@@ -10,7 +10,6 @@ class PagesController < ApplicationController
 
 		@page = "balance"
 
-
 	end
 
 

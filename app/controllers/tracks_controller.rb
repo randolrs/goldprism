@@ -26,6 +26,16 @@ class TracksController < ApplicationController
   def create
     @track = Track.new(track_params)
 
+    # if user_signed_in?
+
+    #   @track.update(:user_id => current_user.id)
+
+    # else
+
+    #   redirect_to root_path
+
+    # end
+
     respond_to do |format|
       if @track.save
         format.html { redirect_to @track, notice: 'Track was successfully created.' }
@@ -69,6 +79,6 @@ class TracksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def track_params
-      params.require(:track).permit(:name, :user_id)
+      params.require(:track).permit(:name, :user_id, :mp3)
     end
 end

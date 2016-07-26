@@ -51,6 +51,96 @@
 
 }
 
+.modal-container.full{
+    position: fixed;
+    left:0;
+    right:0;
+    top:0px;
+    bottom:0px;
+    height:100%;
+    width:100%;
+    background:#000;
+    display:none;
+    vertical-overflow:hidden;
+    z-index: 999999;
+
+}
+
+.modal-content.full{
+    max-width:500px;
+    width:100%;
+    margin:0 auto;
+    z-index: 100;
+    background: #000;
+    top: 100px;
+    position:relative;
+
+    box-shadow: inset 0px 0px 2px #111;
+    border-radius: 5px;
+    border: 2px solid #FF6400;
+
+    h3{
+   
+        color:#FFA100;
+        background: #000;
+        box-shadow: none;
+        padding: 10px 15px;
+        border-radius: 5px 5px 0px 0px;
+        text-align:center;
+        font-weight: 400;
+        text-shadow: 0px 2px 0px #000;
+        font-size: 60px;
+
+    }
+
+    form{
+        padding: 20px;
+
+        input{
+            margin: 0 auto;
+            display: block;
+
+            padding: 10px 0px;
+            max-width: 400px;
+            width: 100%;
+            font-size: 24px;
+            color: #333;
+            text-indent: 5px;
+            border-radius: 3px;
+
+            outline: none;
+            border: none;
+        }
+
+        input:focus{
+            outline: none;
+            border: none;
+        }
+
+        input[type="submit"]{
+
+            text-shadow: 0px 1px 2px #222;
+            background-color: #0F4DA8;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(#437dd4), to(#0f4da8));
+            background-image: -webkit-linear-gradient(top, #437dd4, #0f4da8);
+            background-image: -moz-linear-gradient(top, #437dd4, #0f4da8);
+            background-image: -ms-linear-gradient(top, #437dd4, #0f4da8);
+            background-image: -o-linear-gradient(top, #437dd4, #0f4da8);
+            background-image: linear-gradient(top, #437dd4, #0f4da8);
+            border: 1px solid rgba(0, 0, 0, 0.5);
+            box-shadow: inset 0px 1px 3px 0px #ccc;
+            color: #eee;
+        }
+
+        input[type="submit"]:hover{
+
+            cursor: pointer;
+        }
+    }
+
+
+}
+
 span.dismiss-modal{
     border: 0;
     -webkit-transform: rotate(45deg);
