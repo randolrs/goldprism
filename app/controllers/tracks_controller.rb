@@ -26,15 +26,15 @@ class TracksController < ApplicationController
   def create
     @track = Track.new(track_params)
 
-    # if user_signed_in?
+    if user_signed_in?
 
-    #   @track.update(:user_id => current_user.id)
+      @track.update(:user_id => current_user.id)
 
-    # else
+    else
 
-    #   redirect_to root_path
+      redirect_to root_path
 
-    # end
+    end
 
     respond_to do |format|
       if @track.save

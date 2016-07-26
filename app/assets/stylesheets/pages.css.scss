@@ -133,6 +133,12 @@ body{
 
 }
 
+
+.home-profile-header:hover{
+	cursor: pointer;
+
+}
+
 .home-profile-image{
 	display: table-cell;
 	width: 100px;
@@ -291,6 +297,11 @@ body{
 
     h3{
     	color: #FFB840;
+    	font-size: 24px;
+    }
+
+    h4{
+
     }
 	
 }
@@ -316,4 +327,14 @@ body{
     }
 
 }
+
+
+.home-profile-about{
+	display:none;
+}
+
+.home-profile-about{
+	padding: 0px 10px;
+}
+
 

@@ -4,9 +4,7 @@ class Track < ActiveRecord::Base
 
 
 	has_attached_file :mp3,
-	  :storage => :s3,
-	  :path => "sounds/:id/:style.:extension",
-	  :bucket  => "sounds"
+	  :s3_protocol => :https
 
 	#validates_attachment_content_type :mp3, :content_type => ['audio/mpeg']
 

@@ -26,19 +26,19 @@ ready = ->
 				loginModal = $('body').find(".modal-container#login-form")
 				contentContainer = $('body').find(".content-container")
 				contentContainer.addClass('blurred')
-				loginModal.show()
+				loginModal.fadeIn()
 
 			$(".join-modal-cta").click (event), ->
 				joinModal = $('body').find(".modal-container#join-form")
 				contentContainer = $('body').find(".content-container")
 				contentContainer.addClass('blurred')
-				joinModal.show()
+				joinModal.fadeIn()
 
 			$(".account-settings-modal").click (event), ->
 				settingsModal = $('body').find(".modal-container#settings")
 				contentContainer = $('body').find(".content-container")
 				contentContainer.addClass('blurred')
-				settingsModal.show()
+				settingsModal.fadeIn()
 
 			$(".option-item").click (event), ->
 				$('body').find('.option-item.active').removeClass("active")
@@ -68,6 +68,9 @@ ready = ->
 				confirmForm = thisForm.find('.confirm-form')
 				mainForm.hide()
 				confirmForm.show()
+
+			$(".home-profile-header").click (event), ->
+				$('body').find('.home-profile-about').slideToggle()
 
 $(document).ready(ready)
 $(document).on('page:load', ready)
