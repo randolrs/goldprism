@@ -6,10 +6,10 @@ class Track < ActiveRecord::Base
 	has_attached_file :mp3,
 	  :s3_protocol => :https
 
-	#validates_attachment_content_type :mp3, :content_type => ['audio/mpeg']
+	validates_attachment_content_type :mp3, :content_type => ['audio/mpeg', 'audio/mpg', 'audio/mpeg3' , 'audio/mp3'], :message => 'Track must be in MP3 or WAV format'
 
 
-	validates_attachment_content_type :mp3, :content_type => /.*/
+	#validates_attachment_content_type :mp3, :content_type => /.*/
 
 
 

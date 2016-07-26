@@ -42,7 +42,7 @@
 
 							<li><a><span class="tabular-data-header">Followers</span><br><span>122</span></a></li>
 							<li><a class="middle"><span class="tabular-data-header">Views</span><br><span>122</span></a></li>
-							<li><a><span class="tabular-data-header">Tracks</span><br><span>122</span></a></li>
+							<li><a><span class="tabular-data-header">Tracks</span><br><span><%= @user.tracks.count %></span></a></li>
 
 						</ul>
 
@@ -86,62 +86,43 @@
 			</div>
 
 
+			<br>
+
+			<h3>Similar Citizens</h3>
+
+			<div class="content-frame">
+
+				<div class="content-panel">
+
+					Elise in the house
+
+				</div>
+
+			</div>
+
+
+
+
 		</div>
 
 		<div class="side-content-column">
 
 			<h4>For Sale</h4>
 
-			<div class="content-frame stacked">
+			<% @user.tracks.each do |track| %>
 
-				<div class="content-panel">
+				<div class="content-frame stacked">
 
-					<p>You have 6 new requests for beats totalling $4,000.</p>
+					<div class="content-panel">
 
-				</div>
+						<p><%= track.name%></p>
 
-			</div>
-
-			<div class="content-frame stacked">
-
-				<div class="content-panel">
-
-					<p>You have 6 new requests for beats totalling $4,000.</p>
+					</div>
 
 				</div>
 
-			</div>
 
-			<div class="content-frame stacked">
-
-				<div class="content-panel">
-
-					<p>You have 6 new requests for beats totalling $4,000.</p>
-
-				</div>
-
-			</div>
-
-			<div class="content-frame stacked">
-
-				<div class="content-panel">
-
-					<p>You have 6 new requests for beats totalling $4,000.</p>
-
-				</div>
-
-			</div>
-
-			<div class="content-frame stacked">
-
-				<div class="content-panel">
-
-					<p>You have 6 new requests for beats totalling $4,000.</p>
-
-				</div>
-
-			</div>
-
+			<%end%>
 
 			<br>
 
@@ -186,21 +167,6 @@
 				</div>
 
 			</div>
-
-			<br>
-
-			<h4>Similar Citizens</h4>
-
-			<div class="content-frame">
-
-				<div class="content-panel">
-
-					Elise in the house
-
-				</div>
-
-			</div>
-
 
 		</div>
 
