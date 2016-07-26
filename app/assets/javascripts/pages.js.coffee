@@ -97,6 +97,11 @@ ready = ->
 				audioFunctions = audioContainer.find('.audio-functions')
 				audioFunctions.slideDown()
 				audioPlayer.trigger('play')
+
+			$("div.content-panel.tracks").click (event), ->
+				audioContainer = $('body').find('.audio-player')
+				audioFunctions = audioContainer.find('.audio-functions')
+				audioFunctions.show()
 					
 $(document).ready(ready)
 $(document).on('page:load', ready)
