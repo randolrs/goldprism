@@ -76,7 +76,7 @@ body{
 
 .content-panel{
 	width: auto;
-    background: #111;
+    background: #000;
     box-shadow: inset 0px 2px 5px #333;
     border-radius: 2px;
     border: 2px solid #000;
@@ -135,9 +135,22 @@ body{
     	margin: 0;
 	}
 
+	h6{
+		font-size: 15px;
+    	font-style: italic;
+    	font-weight: 400;
+	}
+
     p{
     	padding:10px;
     }
+}
+
+.content-panel.list{
+
+	background: #222;
+    box-shadow: none;
+	
 }
 
 .home-profile-header{
@@ -160,8 +173,8 @@ body{
 	padding: 0px 10px;
 
 	img{
-		width:100px;
-		height: 100px;
+		width:115px;
+		height: 115px;
 		border-radius: 60px;
 		border:2px solid #fff;
 		box-shadow: 0px 4px 1px #000;
@@ -179,6 +192,14 @@ body{
 	}
 
 
+
+}
+
+.home-profile-citizenship{
+	display: table-cell;
+	vertical-align: top;
+	text-align: right;
+	padding: 10px;
 
 }
 
@@ -305,13 +326,13 @@ body{
     margin-right: 30px;
 
     h2{
-    	color: #FFB840;
+    	color: #FFA100;
     	margin-bottom: 20px;
   		letter-spacing: 1px;
     }
 
     h3{
-    	color: #FFB840;
+    	color: #FFA100;
     	font-size: 24px;
     	letter-spacing: 1px;
     }
@@ -329,12 +350,17 @@ body{
     
     h4{
     	font-size: 24px;
-    	font-weight: 400;
-    	margin-bottom: 10px;
-    	text-shadow: 0px 2px 0px #000;
-    	color: #FFB840;
-    	line-height: 50px;
-    	letter-spacing: 1px;
+	    font-weight: 400;
+	    text-shadow: 0px 2px 0px #000;
+	    text-align: center;
+	    color: #FFA100;
+	    line-height: 50px;
+	    letter-spacing: 1px;
+	    background: #000;
+	    box-shadow: inset 0px 2px 5px #333;
+	    border-radius: 2px;
+	    border: 2px solid #000;
+	    border-bottom: none;
     }
 
     h5{
@@ -359,6 +385,15 @@ body{
 	p {
 		padding: 5px 0px 15px 0px;
 	}
+}
+
+span.citizen-badge{
+	background: rgba(200,0,0,.9);
+    color: #fff;
+    padding: 25px 10px;
+    line-height: 70px;
+    font-size: 20px;
+    border-radius: 50px;
 }
 
 

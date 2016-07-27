@@ -57,21 +57,23 @@
         padding-left: 50px;
 
         a{
-            font-weight: 700;
-            text-shadow: 0px 1px 0px #666;
+            font-weight: 400;
+            text-shadow: 0px 1px 0px #222;
+            color: #fff;
+            font-size: 20px;
         }
 
         a.active{
-
-            text-shadow: 0px 1px 0px #ddd;
-            background: #69D1CC;
-            color: #111;
+            font-weight: 700;
+            background: #6A94D4;
+            color: #fff;
+            text-shadow: 0px 2px 1px #333;
            
         }
 
 
         a.active:hover{
-            color:#111;
+            color:#fff;
         }
 
 
@@ -168,13 +170,13 @@
 
 		    	a:hover{
 		    		cursor: pointer;
-                    color: #69D1CC;
+                    color: #6A94D4;
 		    		
 		    	}
 
 
                 a.active:hover{
-                    color:#111;
+                    color:#fff;
                 }
 
                 a.site-title:hover{

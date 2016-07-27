@@ -23,26 +23,31 @@
 
 							<h4>Producer</h4>
 
+
+							<h6>
+
+								<% if current_user.bio %>
+
+									current_user.bio
+
+								<% else %>
+
+									Just another resident of the 10th Nation.
+
+								<%end%>
+
+							</h6>
+
+						</div>
+
+						<div class="home-profile-citizenship">
+
+							<span class="citizen-badge">Citizen</span>
+
 						</div>
 
 					</div>
 
-
-					<div class="home-profile-about">
-
-							<h3>About Me</h3>
-
-							<% if current_user.bio %>
-
-								<p>current_user.bio</p>
-
-							<% else %>
-
-								<p>Just another resident of the 10th Nation.</p>
-
-							<%end%>
-
-					</div>
 
 					<div class="tabular-data">
 
@@ -115,7 +120,7 @@
 
 				<div class="content-frame stacked">
 
-					<div class="content-panel tracks" id="<%= track.id%>" href="<%= track.mp3.url%>" data-name="<%= track.name%>" data-author="<%= track.user.display_name%>"  data-price="<%= number_to_currency(track.price) %>">
+					<div class="content-panel list tracks" id="<%= track.id%>" href="<%= track.mp3.url%>" data-name="<%= track.name%>" data-author="<%= track.user.display_name%>"  data-price="<%= number_to_currency(track.price) %>">
 
 						<span class="track-name"><%= track.name%></span><span class="track-price"><%= number_to_currency(track.price) %></span>
 
@@ -132,7 +137,7 @@
 
 			<div class="content-frame stacked">
 
-				<div class="content-panel">
+				<div class="content-panel list">
 
 					<p>You have 6 new requests for beats totalling $4,000.</p>
 
@@ -142,7 +147,7 @@
 
 			<div class="content-frame stacked">
 
-				<div class="content-panel">
+				<div class="content-panel list">
 
 					<p>You have 6 new requests for beats totalling $4,000.</p>
 
@@ -152,7 +157,7 @@
 
 			<div class="content-frame stacked">
 
-				<div class="content-panel">
+				<div class="content-panel list">
 
 					<p>You have 6 new requests for beats totalling $4,000.</p>
 
@@ -162,7 +167,7 @@
 
 			<div class="content-frame stacked">
 
-				<div class="content-panel">
+				<div class="content-panel list">
 
 					<p>You have 6 new requests for beats totalling $4,000.</p>
 
