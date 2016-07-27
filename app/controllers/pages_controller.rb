@@ -18,6 +18,15 @@ class PagesController < ApplicationController
 
 	end
 
+	
+
+	def producers
+
+		@producers = User.all
+
+	end
+
+
 
 	def profile_page
 

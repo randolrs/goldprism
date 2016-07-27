@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
    root "pages#home"
 
+   get 'producers' => "pages#producers"
+
    get 'requests' => "pages#requests"
 
    get 'balance' => "pages#balance"
