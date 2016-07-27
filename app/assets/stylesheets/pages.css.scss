@@ -10,7 +10,7 @@ body{
 
 .content-box{
 
-	display: inline-block;
+	
 
 	h2{
 		font-size: 48px;
@@ -23,7 +23,7 @@ body{
 		font-size: 36px;
     	font-weight: 400;
     	line-height: 50px;
-    	text-shadow: 0px 3px 0px #000;
+    	text-shadow: 0px 2px 0px #000;
     	margin-bottom:10px;
 	}
 }
@@ -299,7 +299,7 @@ body{
 
 .main-content-column{
 	
-	max-width:500px;
+	width:600px;
 	display: inline-block;
     vertical-align: top;
     margin-right: 30px;
@@ -307,11 +307,13 @@ body{
     h2{
     	color: #FFB840;
     	margin-bottom: 20px;
+  		letter-spacing: 1px;
     }
 
     h3{
     	color: #FFB840;
     	font-size: 24px;
+    	letter-spacing: 1px;
     }
 
     h4{
@@ -321,7 +323,7 @@ body{
 }
 
 .side-content-column{
-	max-width:300px;
+	width:370px;
 	display: inline-block;
     vertical-align: top;
     
@@ -332,6 +334,7 @@ body{
     	text-shadow: 0px 2px 0px #000;
     	color: #FFB840;
     	line-height: 50px;
+    	letter-spacing: 1px;
     }
 
     h5{
@@ -339,17 +342,23 @@ body{
     	font-weight: 400;
     	margin-bottom: 10px;
     	text-shadow: 0px 2px 0px #000;
+    	letter-spacing: 1px;
     }
 
 }
 
 
 .home-profile-about{
-	display:none;
+	display:block;
 }
 
 .home-profile-about{
+	display:block;
 	padding: 0px 10px;
+
+	p {
+		padding: 5px 0px 15px 0px;
+	}
 }
 
 

@@ -4,15 +4,11 @@
 
 		<ul class="header-left">
 
-			<li class="site-title"><%= link_to "10th", root_path, class: "site-title" %></li>
+			<li><a class="<% if @page == "home" %> active <%end%>" href="<%= root_path %>">Home</a></li>
 
-			<li><%= link_to "Producers", producers_path, class: "first-item" %></li>
+			<% unless current_user.display_name == "" %><li><a class=" <% if @page == "profile" %> active <%end%>" href="<%= profile_page_path(current_user.display_name)%>">My Profile</a></li><%end%>
 
-			<li><%= link_to "MCs", root_path, class: "item" %></li>
-
-			<li><%= link_to "Studios", root_path, class: "item" %></li>
-
-			<li><%= link_to "Labels", root_path, class: "item" %></li>
+			<li><a class="<% if @page == "requests" %> active <%end%>" href="<%= requests_path %>">Requests</a></li>
 
 		</ul>
 
@@ -26,11 +22,9 @@
 
 		<%else%>
 
-			<li><a class="header-cta" id="upload-track-cta">Sell a New Beat</a></li>
 
-			<li><a class="account-settings-modal">Account Settings</a></li>
-
-			<li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+			<li><a class="header-cta blue" id="upload-track-cta">Sell</a></li>
+			<li><a class="header-cta darkblue" id="upload-track-cta">Make Request</a></li>
 
 		<%end%>
 

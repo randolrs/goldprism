@@ -12,11 +12,12 @@
 <% unless @hide_menus%>
 
 	<%# render 'layouts/header' %>
+	<%= render 'layouts/header' %>
 	<%= render 'layouts/sub_header' %>
 
-	<% if user_signed_in? %>
-		<%= render 'layouts/sidebar' %>
-	<%end%>
+	<%# if user_signed_in? %>
+		<%# render 'layouts/sidebar' %>
+	<%#end%>
 
 <%end%>
 

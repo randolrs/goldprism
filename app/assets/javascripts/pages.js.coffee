@@ -24,6 +24,7 @@ ready = ->
 
 			$(".login-modal-cta").click (event), ->
 				loginModal = $('body').find(".modal-container#login-form")
+				loginModal.find("input#user_email").focus()
 				contentContainer = $('body').find(".content-container")
 				contentContainer.addClass('blurred')
 				loginModal.fadeIn()
@@ -77,9 +78,6 @@ ready = ->
 				confirmForm = thisForm.find('.confirm-form')
 				mainForm.hide()
 				confirmForm.show()
-
-			$(".home-profile-header").click (event), ->
-				$('body').find('.home-profile-about').slideToggle()
 
 			$(".content").click (event), ->
 				audioContainer = $('body').find('.audio-player')
