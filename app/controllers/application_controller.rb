@@ -18,13 +18,26 @@ class ApplicationController < ActionController::Base
 
 	end
 
+
 	def configure_permitted_parameters
+	    registration_params = [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
+	    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(registration_params) }
+	    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(registration_params << :current_password) }
+  	end
+
+
+	#def configure_permitted_parameters
 			
 		#devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation])
 
-		devise_parameter_sanitizer.for(:sign_in)        << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
-   		devise_parameter_sanitizer.for(:sign_up)        << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
-   		devise_parameter_sanitizer.for(:account_update) << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
+		#devise_parameter_sanitizer.for(:sign_in) << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
+   		#devise_parameter_sanitizer.for(:sign_up) << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
+   		#devise_parameter_sanitizer.for(:account_update) << [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
+
+   		#devise_parameter_sanitizer.permit(:sign_in, keys: [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation])
+   		#devise_parameter_sanitizer.permit(:sign_up, keys: [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation])
+   		#devise_parameter_sanitizer.permit(:account_update, keys: [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation])
+
 
 		# registration_params = [:email, :display_name, :first_name, :last_name, :password, :image, :password, :password_confirmation]
 
@@ -40,7 +53,7 @@ class ApplicationController < ActionController::Base
 
 		# end
 
-	end
+	#end
 
 
 
