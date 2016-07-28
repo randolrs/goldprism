@@ -100,6 +100,10 @@ ready = ->
 				audioContainer = $('body').find('.audio-player')
 				audioFunctions = audioContainer.find('.audio-functions')
 				audioFunctions.show()
+
+			$("a.tabular-option").click (event), ->
+				$(@).parent().parent().parent().find('a.active').removeClass('active')
+				$(@).addClass('active')
 					
 $(document).ready(ready)
 $(document).on('page:load', ready)
