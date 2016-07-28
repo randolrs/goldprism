@@ -2,10 +2,13 @@ class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
 
+  	Stripe.api_key = ENV["stripe_api_key"]
 
   	protect_from_forgery with: :exception
 
-  	before_filter :new_track_for_form
+  	before_action :new_track_for_form
+
+  	before_action :check_account, if: :user_signed_in?
 
 	before_action :configure_permitted_parameters, if: :devise_controller?
 
@@ -15,6 +18,26 @@ class ApplicationController < ActionController::Base
 	def new_track_for_form
 
 		@new_track = Track.new
+
+	end
+
+	def check_account
+
+		
+		unless current_user.stripe_account_id
+
+			account = Stripe::Account.create(
+				  {
+				    :country => "US",
+				    :managed => true
+				  }
+				)
+
+			current_user.update(:stripe_account_id => account.id)
+
+
+
+		end
 
 	end
 

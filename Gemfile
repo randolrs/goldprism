@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -14,6 +14,16 @@ group :production do
 end
 
 gem 'paperclip', '~> 4.2'
+
+
+gem "stripe", :git => 'https://github.com/stripe/stripe-ruby'
+
+gem "stripe_event"
+
+gem 'possessive'
+
+gem "figaro"
+
 
 gem 'aws-sdk', '< 2.0'
 

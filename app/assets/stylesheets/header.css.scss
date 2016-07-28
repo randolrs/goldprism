@@ -3,7 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .header-container{
-	background-image: asset-url("seamless_paper_texture.png");
+	
+    background: #000;
     color: #fff;
     box-shadow: 0px 0px 2px #000;
     position: fixed;
@@ -12,7 +13,7 @@
 
     div.header-center{
 
-        background: #111;
+       
 
     }
 
@@ -46,10 +47,10 @@
     z-index: 6000;
     top: 40px;
     border-top: 2px solid #222;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #111;
 
     box-shadow: 0px 1px 5px #000;
-    background: #111;
+    background: #000;
 
 
     ul.header-left{
